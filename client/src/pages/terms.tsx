@@ -55,14 +55,14 @@ export default function Terms() {
                     <div>
                       <div className="flex items-center mb-2">
                         <Calendar className="w-4 h-4 mr-2 text-primary-600" />
-                        <span className="font-medium">Days 0–45: Setup/Warmup</span>
+                        <h4 className="font-medium text-gray-900">Days 0–45: Setup/Warmup</h4>
                       </div>
                       <p className="text-sm text-gray-600">Initial setup, configuration, and optimization period</p>
                     </div>
                     <div>
                       <div className="flex items-center mb-2">
                         <Target className="w-4 h-4 mr-2 text-green-600" />
-                        <span className="font-medium">Days 46–135: Guarantee Window</span>
+                        <h4 className="font-medium text-gray-900">Days 46–135: Guarantee Window</h4>
                       </div>
                       <p className="text-sm text-gray-600">90-day measurement period for performance evaluation</p>
                     </div>
