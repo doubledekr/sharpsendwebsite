@@ -5,22 +5,41 @@ import { Link } from "wouter";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-8">
-          <Link href="/">
-            <Button variant="ghost" className="mb-4" data-testid="back-link">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About SharpSend</h1>
-          <p className="text-xl text-gray-600">
-            Empowering financial publishers to maximize newsletter revenue through AI-powered 
-            personalization and precise attribution tracking.
-          </p>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-3">
+              <Link href="/">
+                <div className="flex items-center space-x-3 cursor-pointer">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">S</span>
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">SharpSend</span>
+                </div>
+              </Link>
+              <span className="text-gray-400">/ About Us</span>
+            </div>
+          </div>
         </div>
+      </nav>
+
+      <div className="pt-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center">
+                <Target className="w-8 h-8 text-primary-600" />
+              </div>
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">About SharpSend</h1>
+            <p className="text-xl text-gray-600">
+              Empowering financial publishers to maximize newsletter revenue through AI-powered 
+              personalization and precise attribution tracking.
+            </p>
+          </div>
 
         {/* Mission Statement */}
         <section className="mb-16">
@@ -266,6 +285,7 @@ export default function About() {
             <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-primary-700">
               <Link href="/careers">Join Our Mission</Link>
             </Button>
+          </div>
           </div>
         </div>
       </div>

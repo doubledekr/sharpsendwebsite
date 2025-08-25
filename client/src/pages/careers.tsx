@@ -53,8 +53,8 @@ export default function Careers() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50 py-16">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-white">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-8">
               <CheckCircle className="w-10 h-10 text-green-600" />
@@ -74,22 +74,41 @@ export default function Careers() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-8">
-          <Link href="/">
-            <Button variant="ghost" className="mb-4" data-testid="back-link">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Join Our Team</h1>
-          <p className="text-lg text-gray-600 max-w-3xl">
-            Help us revolutionize newsletter optimization for financial publishers. We're building 
-            the future of AI-powered email marketing and we'd love to have you on the journey.
-          </p>
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-3">
+              <Link href="/">
+                <div className="flex items-center space-x-3 cursor-pointer">
+                  <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">S</span>
+                  </div>
+                  <span className="text-xl font-bold text-gray-900">SharpSend</span>
+                </div>
+              </Link>
+              <span className="text-gray-400">/ Careers</span>
+            </div>
+          </div>
         </div>
+      </nav>
+
+      <div className="pt-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center">
+                <Users className="w-8 h-8 text-primary-600" />
+              </div>
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Join Our Team</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Help us revolutionize newsletter optimization for financial publishers. We're building 
+              the future of AI-powered email marketing and we'd love to have you on the journey.
+            </p>
+          </div>
 
         {/* Company Culture */}
         <section className="mb-16">
@@ -682,6 +701,7 @@ export default function Careers() {
             </CardContent>
           </Card>
         </section>
+        </div>
       </div>
     </div>
   );
