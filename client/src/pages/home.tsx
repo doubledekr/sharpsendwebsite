@@ -1059,9 +1059,9 @@ export default function Home() {
               © 2025 SharpSend. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy</a>
+              <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy</Link>
               <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms</Link>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Security</a>
+              <Link href="/security" className="text-gray-400 hover:text-white transition-colors text-sm">Security</Link>
             </div>
           </div>
         </div>
