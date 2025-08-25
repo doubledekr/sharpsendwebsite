@@ -684,44 +684,44 @@ export default function Home() {
               Pricing That Scales With Your Success
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Start free, pay only for results. Our pricing model grows with your newsletter revenue, 
-              so you only pay more when you're making more.
+              Start free with our Starter plan. Upgrade as you grow to unlock premium features 
+              and higher usage limits designed for financial publishers.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {/* Starter */}
-            <Card className="bg-white border-2 border-gray-200" data-testid="pricing-starter">
+            {/* Starter - FREE */}
+            <Card className="bg-white border-2 border-green-200" data-testid="pricing-starter">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Starter</h3>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">$99</div>
-                  <p className="text-gray-500 text-sm">per month</p>
+                  <div className="text-3xl font-bold text-green-600 mb-1">Free</div>
+                  <p className="text-gray-500 text-sm">forever</p>
                 </div>
                 <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">100K tracked events</span>
+                    <span className="text-gray-600">5K tracked events/month</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">5 GB CDN bandwidth</span>
+                    <span className="text-gray-600">500MB CDN bandwidth</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">1M AI tokens</span>
+                    <span className="text-gray-600">50K AI tokens</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">2 seats</span>
+                    <span className="text-gray-600">1 seat</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">2 basic connectors</span>
+                    <span className="text-gray-600">1 basic connector</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">90-day analytics retention</span>
+                    <span className="text-gray-600">7-day analytics retention</span>
                   </li>
                 </ul>
                 <Button 
@@ -730,7 +730,7 @@ export default function Home() {
                   className="w-full" 
                   data-testid="pricing-starter-btn"
                 >
-                  Join Waitlist
+                  Get Started Free
                 </Button>
               </CardContent>
             </Card>
@@ -745,33 +745,33 @@ export default function Home() {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Growth</h3>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">$399</div>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">$79</div>
                   <p className="text-gray-500 text-sm">per month</p>
                 </div>
                 <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">2M tracked events</span>
+                    <span className="text-gray-600">100K tracked events/month</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">50 GB CDN bandwidth</span>
+                    <span className="text-gray-600">10 GB CDN bandwidth</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">5M AI tokens</span>
+                    <span className="text-gray-600">1M AI tokens</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">5 seats</span>
+                    <span className="text-gray-600">3 seats</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">5 connectors + 1 premium</span>
+                    <span className="text-gray-600">3 basic connectors</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">12-month retention</span>
+                    <span className="text-gray-600">90-day analytics retention</span>
                   </li>
                 </ul>
                 <Button 
@@ -784,38 +784,38 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Pro */}
+            {/* Professional */}
             <Card className="bg-white border-2 border-gray-200" data-testid="pricing-pro">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Pro</h3>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">$999</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional</h3>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">$299</div>
                   <p className="text-gray-500 text-sm">per month</p>
                 </div>
                 <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">10M tracked events</span>
+                    <span className="text-gray-600">750K tracked events/month</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">250 GB CDN bandwidth</span>
+                    <span className="text-gray-600">75 GB CDN bandwidth</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">20M AI tokens</span>
+                    <span className="text-gray-600">5M AI tokens</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">15 seats</span>
+                    <span className="text-gray-600">8 seats</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">All premium connectors</span>
+                    <span className="text-gray-600">8 connectors (5 basic + 3 premium)</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">SSO + 24-month retention</span>
+                    <span className="text-gray-600">12-month retention + priority support</span>
                   </li>
                 </ul>
                 <Button 
@@ -834,33 +834,33 @@ export default function Home() {
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Enterprise</h3>
-                  <div className="text-3xl font-bold text-gray-900 mb-1">Custom</div>
-                  <p className="text-gray-500 text-sm">Volume discounts</p>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">$899</div>
+                  <p className="text-gray-500 text-sm">per month</p>
                 </div>
                 <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">50M+ events</span>
+                    <span className="text-gray-600">3M tracked events/month</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">1TB+ CDN bandwidth</span>
+                    <span className="text-gray-600">300 GB CDN bandwidth</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">100M+ AI tokens</span>
+                    <span className="text-gray-600">20M AI tokens</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">Unlimited seats</span>
+                    <span className="text-gray-600">20 seats</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">Private cluster/VPC</span>
+                    <span className="text-gray-600">All premium connectors + SSO</span>
                   </li>
                   <li className="flex items-center">
                     <Check className="w-4 h-4 text-green-500 mr-2" />
-                    <span className="text-gray-600">Custom SLAs</span>
+                    <span className="text-gray-600">24-month retention + success manager</span>
                   </li>
                 </ul>
                 <Button variant="secondary" className="w-full" data-testid="pricing-enterprise-btn">
@@ -877,14 +877,14 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-6 text-sm">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3">Tracked Events</h4>
-                  <p className="text-gray-600 mb-4">Email pixel loads + link click redirects. Overage pricing: $0.45-$0.60 per 100K additional events.</p>
+                  <p className="text-gray-600 mb-4">Email pixel loads + link click redirects. Overage pricing: $0.40-$0.50 per 100K additional events.</p>
                   
                   <h4 className="font-semibold text-gray-900 mb-3">AI Token Usage</h4>
-                  <p className="text-gray-600">For content generation, subject lines, and personalization. Overage: $4-$6 per 1M additional tokens.</p>
+                  <p className="text-gray-600">For content generation, subject lines, and personalization. Overage: $10-$15 per 1M additional tokens.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3">CDN Bandwidth</h4>
-                  <p className="text-gray-600 mb-4">For serving images and tracking pixels. Overage pricing: $0.08-$0.12 per additional GB.</p>
+                  <p className="text-gray-600 mb-4">For serving images and tracking pixels. Overage pricing: $0.10-$0.15 per additional GB.</p>
                   
                   <h4 className="font-semibold text-gray-900 mb-3">Premium Connectors</h4>
                   <p className="text-gray-600">HubSpot, Salesforce Marketing Cloud, Marketo. Basic: Mailchimp, SendGrid, Klaviyo, ActiveCampaign.</p>
@@ -899,16 +899,42 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">Available Add-ons</h3>
               <div className="grid md:grid-cols-3 gap-4 text-sm">
                 <div className="text-center">
-                  <div className="font-semibold text-gray-900">AI Credit Packs</div>
-                  <div className="text-gray-600">$40 = 10M tokens</div>
+                  <div className="font-semibold text-gray-900">AI Token Packs</div>
+                  <div className="text-gray-600">10M tokens = $120</div>
+                  <div className="text-gray-600">50M tokens = $500</div>
                 </div>
                 <div className="text-center">
                   <div className="font-semibold text-gray-900">Extra Seats</div>
-                  <div className="text-gray-600">$10-$15 per user/month</div>
+                  <div className="text-gray-600">$25 per user/month</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-semibold text-gray-900">Priority Support</div>
-                  <div className="text-gray-600">$400/month</div>
+                  <div className="font-semibold text-gray-900">Premium Support</div>
+                  <div className="text-gray-600">$199/month</div>
+                  <div className="text-gray-600">Custom integration: $499 setup + $99/month</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Annual Discount */}
+          <div className="mt-8 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-50 to-primary-50 rounded-xl p-6 text-center" data-testid="annual-discount">
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Save with Annual Plans</h3>
+              <p className="text-gray-600 text-sm mb-4">
+                Get 12-17% off when you pay annually. Better cash flow, reduced churn, and priority support.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="font-semibold text-primary-600">Growth Annual</div>
+                  <div className="text-gray-600">$69/month (save $120/year)</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold text-primary-600">Professional Annual</div>
+                  <div className="text-gray-600">$249/month (save $600/year)</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold text-primary-600">Enterprise Annual</div>
+                  <div className="text-gray-600">$749/month (save $1,800/year)</div>
                 </div>
               </div>
             </div>
