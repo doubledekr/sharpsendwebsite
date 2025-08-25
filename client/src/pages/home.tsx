@@ -65,9 +65,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">S</span>
-              </div>
+              <img src="/sharpsend-logo.png" alt="SharpSend" className="w-8 h-8" />
               <span className="text-xl font-bold text-gray-900">SharpSend</span>
             </div>
             
@@ -1015,9 +1013,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">S</span>
-                </div>
+                <img src="/sharpsend-logo.png" alt="SharpSend" className="w-8 h-8 filter brightness-0 invert" />
                 <span className="text-xl font-bold text-white">SharpSend</span>
               </div>
               <p className="text-gray-400 mb-6 max-w-md">
@@ -1075,8 +1071,8 @@ export default function Home() {
       <Dialog open={isWaitlistOpen} onOpenChange={setIsWaitlistOpen}>
         <DialogContent className="max-w-md" data-testid="waitlist-modal">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-primary-800 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Zap className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <img src="/sharpsend-logo.png" alt="SharpSend" className="w-10 h-10" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Join the Waitlist</h3>
             <p className="text-gray-600">Be among the first 100 financial publishers to get early access</p>

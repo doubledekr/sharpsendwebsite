@@ -13,9 +13,7 @@ export default function About() {
             <div className="flex items-center space-x-3">
               <Link href="/">
                 <div className="flex items-center space-x-3 cursor-pointer">
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">S</span>
-                  </div>
+                  <img src="/sharpsend-logo.png" alt="SharpSend" className="w-8 h-8" />
                   <span className="text-xl font-bold text-gray-900">SharpSend</span>
                 </div>
               </Link>
@@ -30,8 +28,8 @@ export default function About() {
           {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl flex items-center justify-center">
-                <Target className="w-8 h-8 text-primary-600" />
+              <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center">
+                <img src="/sharpsend-logo.png" alt="SharpSend" className="w-10 h-10" />
               </div>
             </div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">About SharpSend</h1>
