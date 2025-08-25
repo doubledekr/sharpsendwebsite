@@ -689,7 +689,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
             {/* Starter - FREE */}
             <Card className="bg-white border-2 border-green-200" data-testid="pricing-starter">
               <CardContent className="p-6">
@@ -864,6 +864,46 @@ export default function Home() {
                   </li>
                 </ul>
                 <Button variant="secondary" className="w-full" data-testid="pricing-enterprise-btn">
+                  Contact Sales
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Plus */}
+            <Card className="bg-gradient-to-br from-gray-900 to-gray-800 text-white border-2 border-gray-700" data-testid="pricing-enterprise-plus">
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-lg font-semibold text-white mb-2">Enterprise Plus</h3>
+                  <div className="text-3xl font-bold text-white mb-1">$2,499</div>
+                  <p className="text-gray-300 text-sm">starting price/month</p>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-200">10M+ tracked events/month</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-200">1TB+ CDN bandwidth</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-200">100M+ AI tokens</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-200">Unlimited seats</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-200">Private cluster/VPC</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-400 mr-2" />
+                    <span className="text-gray-200">White-label + custom SLAs</span>
+                  </li>
+                </ul>
+                <Button variant="secondary" className="w-full bg-white text-gray-900 hover:bg-gray-100" data-testid="pricing-enterprise-plus-btn">
                   Contact Sales
                 </Button>
               </CardContent>
