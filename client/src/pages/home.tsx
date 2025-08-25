@@ -42,7 +42,7 @@ export default function Home() {
     refetchInterval: 30000, // Refresh every 30 seconds
   });
 
-  const waitlistCount = waitlistStats?.count || 847;
+  const waitlistCount = (waitlistStats as { count?: number })?.count || 847;
 
   const handleWaitlistSuccess = () => {
     setIsWaitlistOpen(false);
@@ -690,72 +690,89 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {/* Starter */}
-            <Card className="bg-gray-50 border-2 border-gray-100" data-testid="pricing-starter">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
-                  <div className="text-4xl font-bold text-gray-900 mb-1">Free</div>
-                  <p className="text-gray-500">Up to 1,000 subscribers</p>
+            <Card className="bg-white border-2 border-gray-200" data-testid="pricing-starter">
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Starter</h3>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">$99</div>
+                  <p className="text-gray-500 text-sm">per month</p>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Basic AI personalization</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">100K tracked events</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">2 platform integrations</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">5 GB CDN bandwidth</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Basic analytics</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">1M AI tokens</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Email support</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">2 seats</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">2 basic connectors</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">90-day analytics retention</span>
                   </li>
                 </ul>
-                <Button variant="secondary" className="w-full" data-testid="pricing-starter-btn">
-                  Coming Soon
+                <Button 
+                  onClick={() => setIsWaitlistOpen(true)} 
+                  variant="outline" 
+                  className="w-full" 
+                  data-testid="pricing-starter-btn"
+                >
+                  Join Waitlist
                 </Button>
               </CardContent>
             </Card>
 
-            {/* Growth */}
-            <Card className="bg-white border-2 border-primary-200 shadow-lg relative" data-testid="pricing-growth">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
+            {/* Growth - Most Popular */}
+            <Card className="bg-white border-2 border-primary-500 shadow-lg relative" data-testid="pricing-growth">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="bg-primary-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  Popular
                 </div>
               </div>
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Growth</h3>
-                  <div className="text-4xl font-bold text-gray-900 mb-1">$197</div>
-                  <p className="text-gray-500">per month + 3% of attributed revenue</p>
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Growth</h3>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">$399</div>
+                  <p className="text-gray-500 text-sm">per month</p>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Advanced AI personalization</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">2M tracked events</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">All 16+ integrations</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">50 GB CDN bandwidth</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Revenue attribution</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">5M AI tokens</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Smart cohort detection</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">5 seats</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Priority support</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">5 connectors + 1 premium</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">12-month retention</span>
                   </li>
                 </ul>
                 <Button 
@@ -768,30 +785,83 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            {/* Enterprise */}
-            <Card className="bg-gray-50 border-2 border-gray-100" data-testid="pricing-enterprise">
-              <CardContent className="p-8">
-                <div className="text-center mb-8">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
-                  <div className="text-4xl font-bold text-gray-900 mb-1">Custom</div>
-                  <p className="text-gray-500">Volume discounts available</p>
+            {/* Pro */}
+            <Card className="bg-white border-2 border-gray-200" data-testid="pricing-pro">
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Pro</h3>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">$999</div>
+                  <p className="text-gray-500 text-sm">per month</p>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-6 text-sm">
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Custom AI models</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">10M tracked events</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">White-label options</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">250 GB CDN bandwidth</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Dedicated account manager</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">20M AI tokens</span>
                   </li>
                   <li className="flex items-center">
-                    <Check className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-600">Custom integrations</span>
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">15 seats</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">All premium connectors</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">SSO + 24-month retention</span>
+                  </li>
+                </ul>
+                <Button 
+                  onClick={() => setIsWaitlistOpen(true)} 
+                  variant="outline" 
+                  className="w-full" 
+                  data-testid="pricing-pro-btn"
+                >
+                  Join Waitlist
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise */}
+            <Card className="bg-gray-50 border-2 border-gray-200" data-testid="pricing-enterprise">
+              <CardContent className="p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Enterprise</h3>
+                  <div className="text-3xl font-bold text-gray-900 mb-1">Custom</div>
+                  <p className="text-gray-500 text-sm">Volume discounts</p>
+                </div>
+                <ul className="space-y-3 mb-6 text-sm">
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">50M+ events</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">1TB+ CDN bandwidth</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">100M+ AI tokens</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">Unlimited seats</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">Private cluster/VPC</span>
+                  </li>
+                  <li className="flex items-center">
+                    <Check className="w-4 h-4 text-green-500 mr-2" />
+                    <span className="text-gray-600">Custom SLAs</span>
                   </li>
                 </ul>
                 <Button variant="secondary" className="w-full" data-testid="pricing-enterprise-btn">
@@ -799,6 +869,50 @@ export default function Home() {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* Pricing Details */}
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="bg-gray-50 rounded-xl p-8" data-testid="pricing-details">
+              <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">What's Included</h3>
+              <div className="grid md:grid-cols-2 gap-6 text-sm">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Tracked Events</h4>
+                  <p className="text-gray-600 mb-4">Email pixel loads + link click redirects. Overage pricing: $0.45-$0.60 per 100K additional events.</p>
+                  
+                  <h4 className="font-semibold text-gray-900 mb-3">AI Token Usage</h4>
+                  <p className="text-gray-600">For content generation, subject lines, and personalization. Overage: $4-$6 per 1M additional tokens.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3">CDN Bandwidth</h4>
+                  <p className="text-gray-600 mb-4">For serving images and tracking pixels. Overage pricing: $0.08-$0.12 per additional GB.</p>
+                  
+                  <h4 className="font-semibold text-gray-900 mb-3">Premium Connectors</h4>
+                  <p className="text-gray-600">HubSpot, Salesforce Marketing Cloud, Marketo. Basic: Mailchimp, SendGrid, Klaviyo, ActiveCampaign.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Add-ons */}
+          <div className="mt-8 max-w-4xl mx-auto">
+            <div className="bg-primary-50 rounded-xl p-6" data-testid="pricing-addons">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">Available Add-ons</h3>
+              <div className="grid md:grid-cols-3 gap-4 text-sm">
+                <div className="text-center">
+                  <div className="font-semibold text-gray-900">AI Credit Packs</div>
+                  <div className="text-gray-600">$40 = 10M tokens</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold text-gray-900">Extra Seats</div>
+                  <div className="text-gray-600">$10-$15 per user/month</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold text-gray-900">Priority Support</div>
+                  <div className="text-gray-600">$400/month</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* ROI Guarantee */}

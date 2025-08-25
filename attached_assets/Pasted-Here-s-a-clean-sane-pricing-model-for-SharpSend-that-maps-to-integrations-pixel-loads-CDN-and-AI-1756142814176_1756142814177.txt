@@ -1,0 +1,68 @@
+Here’s a clean, sane pricing model for SharpSend that maps to integrations, pixel loads, CDN, and AI token use—plus an add-on “credits” system so heavy users can top up without jumping tiers.
+Metered dimensions (what we count)
+Tracked events: email pixel loads + link click redirects
+CDN bandwidth: GB served for images/pixel
+AI tokens: used for copy generation, subject lines, variants, summaries
+Connectors: basic vs. premium integrations
+Seats & SLA: user count and support level
+Suggested tiers (monthly, annual -10% optional)
+Starter — $99
+100k tracked events
+5 GB CDN
+1M AI tokens
+2 seats
+2 basic connectors (e.g., Brevo, Mailchimp, SendGrid, SES)
+90-day analytics retention
+Overage: $0.60 per +100k events, $0.12/GB, $6 per +1M tokens
+Growth — $399
+2M tracked events
+50 GB CDN
+5M AI tokens
+5 seats
+5 connectors (incl. any 1 premium: HubSpot/Marketo/or SFMC)
+12-month retention
+Overage: $0.50 per +100k events, $0.10/GB, $5 per +1M tokens
+Pro — $999
+10M tracked events
+250 GB CDN
+20M AI tokens
+15 seats
+All connectors (premium included)
+SSO (SAML), audit logs, priority support, 24-month retention
+Overage: $0.45 per +100k events, $0.08/GB, $4 per +1M tokens
+Enterprise — custom
+50M+ events, 1TB+ CDN, 100M+ tokens
+Private cluster/VPC options, custom SLAs, bespoke pricing
+Volume overage discounts
+Add-ons (“Credits” device)
+AI Credit Packs (prepaid): $40 = 10M tokens; $180 = 50M; $320 = 100M
+(Applied before overage; great for campaign spikes.)
+Extra Premium Connector (Growth): +$200/mo each (Marketo, SFMC, HubSpot)
+Extra Seats: $15/user/mo (Starter/Growth), $10/user/mo (Pro)
+Vanity tracking domain: $25/mo (per domain)
+Data retention extension: +$50/mo per extra 6 months (Starter/Growth)
+Priority support (if not in plan): $400/mo
+Why this works
+Event-based pricing aligns with your value (optimization + analytics) regardless of where emails are sent.
+CDN & tokens are the variable cost drivers; bundling some into tiers keeps bills predictable.
+Add-on credits prevent forced tier jumps during spikes.
+Back-of-napkin for your earlier scenario
+300,000 emails/day pulling an image
+Pixel loads/month: 300,000 × 30 = 9,000,000 events
+(fits inside Pro’s 10M)
+CDN bandwidth (example): assume ~30 KB per image
+9,000,000 × 30 KB = 270,000,000 KB = 270,000 MB = 270 GB
+(Pro includes 250 GB → 20 GB overage)
+Click redirects: if CTR ≈ 3%, clicks ≈ 270,000 (already counted in “events” if you include them)
+AI usage (if generating copy): a 1,000-word draft typically runs ~2,000–3,000 tokens end-to-end.
+100 drafts/month ≈ 200k–300k tokens (well within Growth/Pro bundles).
+Estimated bill (with those assumptions):
+Pro plan: $999
+CDN overage: 20 GB × $0.08 ≈ $1.60
+Events: under 10M → no event overage
+AI: depends on your workflow; likely within the 20M included (or use prepaid credits).
+Total ≈ $1,000–$1,100/mo before any optional add-ons.
+Notes on integrations
+Basic connectors: Brevo, Mailchimp, SendGrid, SES, Klaviyo, ActiveCampaign.
+Premium connectors: Salesforce Marketing Cloud (ExactTarget), HubSpot, Marketo.
+(Priced up because they need heavier support and ongoing API maintenance.)
