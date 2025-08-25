@@ -1,0 +1,35 @@
+I dropped a full docs pack into the canvas with everything you asked for:
+
+* Terms & Conditions (MSA-style, with the safer Performance Promise language baked in)
+* API docs (auth, rate limits, pixels, click redirects, Events & Conversions APIs, reporting, webhooks, connectors)
+* Integrations & Features overview (basic vs. premium ESP/CRM connectors, compliance/deliverability, security, scalability)
+* About, Contact, and Careers pages (ready to paste into your site)
+* 3 blog drafts:
+
+  1. Do AI-Written Subject Lines Actually Lift Results in 2024–2025?
+  2. How to Prove Newsletter Revenue Lift in 90 Days (Holdout Method)
+  3. New Gmail/Yahoo Sender Rules: What Publishers Need (and How SharpSend Helps)
+
+If you want, I can add a Privacy Policy + DPA summary + SLA as a follow-on.
+
+# Sources used for the blog drafts
+
+* Benchmarks & trends: Mailchimp industry benchmarks; HubSpot’s 2025 open-rate roundup; Campaign Monitor guidance; Validity’s “State of Email 2024”; Litmus’s State of Email reports. ([Mailchimp][1], [HubSpot Blog][2], [Campaign Monitor][3], [Validity][4], [Litmus][5])
+* AI in email performance: Litmus “2024 State of Email Trends” (GenAI mostly time-savings vs. performance). ([Litmus][6])
+* Holdout & incrementality methodology: Optimizely docs (global holdout, experiment duration & power) and practical guides on uplift measurement. ([Optimizely][7], [Optimizely Support][8], [rejoiner.com][9])
+* New Gmail/Yahoo sender requirements: Google sender guidelines & FAQ (alignment, SPF/DKIM/DMARC), Yahoo sender best practices (complaint rate), and summaries covering one-click unsubscribe (RFC 8058). ([Google Help][10], [senders.yahooinc.com][11], [MxToolbox][12])
+
+Want me to tailor the T\&C to Delaware law, or swap in your corporate details (legal name, address, contact emails) so it’s publish-ready?
+
+[1]: https://mailchimp.com/resources/email-marketing-benchmarks/?utm_source=chatgpt.com "Email Marketing Benchmarks & Industry Statistics"
+[2]: https://blog.hubspot.com/sales/average-email-open-rate-benchmark?utm_source=chatgpt.com "Email Open Rates By Industry (& Other Top ..."
+[3]: https://www.campaignmonitor.com/resources/knowledge-base/what-are-good-email-metrics/?utm_source=chatgpt.com "What are good open rates, CTRs, & CTORs for email ..."
+[4]: https://www.validity.com/resource-center/the-state-of-email-in-2024-keeping-ahead-of-the-curve/?utm_source=chatgpt.com "The State of Email in 2024: Keeping Ahead of the Curve"
+[5]: https://www.litmus.com/state-of-email-reports?utm_source=chatgpt.com "The State of Email Reports"
+[6]: https://www.litmus.com/wp-content/uploads/pdf/The-2024-State-of-Email-Trends.pdf?mkt_tok=ODY0LVZQWi0xMzEAAAGTbufhcjghzqlcCD4Uuxp9aD01tbm3TNjv6Tl1tq8ynSO5bNyRJxcRxQ8AI5nPY3NjUQJlaYhHxdeKSqtPYtUGJGIEf2ObxVKjy4ag2hyXUh0C&utm_campaign=wc-2024-02-the_2024_state_of_email_trends-litmus_thought_leadership&utm_medium=email&utm_source=chatgpt.com "The State of Email Trends Report"
+[7]: https://docs.developers.optimizely.com/feature-experimentation/docs/global-holdout-groups?utm_source=chatgpt.com "Global holdout groups"
+[8]: https://support.optimizely.com/hc/en-us/articles/4410283969165-How-long-to-run-an-experiment?utm_source=chatgpt.com "How long to run an experiment"
+[9]: https://www.rejoiner.com/resources/measure-true-profitability-email-campaigns-using-holdout-tests?utm_source=chatgpt.com "How to Measure The True Profitability of Your Email ..."
+[10]: https://support.google.com/a/answer/81126?hl=en&utm_source=chatgpt.com "Email sender guidelines - Google Workspace Admin Help"
+[11]: https://senders.yahooinc.com/best-practices/?utm_source=chatgpt.com "Sender Best Practices"
+[12]: https://mxtoolbox.com/c/landing/gmail-and-yahoo-new-dmarc-spam-sender-requirements?utm_source=chatgpt.com "New Gmail & Yahoo Sender Requirements - What are they?"
