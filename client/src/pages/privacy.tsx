@@ -289,8 +289,9 @@ export default function Privacy() {
                 © 2025 SharpSend. All rights reserved.
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
-                <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms</Link>
                 <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy</Link>
+                <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms</Link>
+                <Link href="/security" className="text-gray-400 hover:text-white text-sm transition-colors">Security</Link>
               </div>
             </div>
           </div>
