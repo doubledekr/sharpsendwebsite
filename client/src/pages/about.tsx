@@ -280,7 +280,7 @@ export default function About() {
             <Button asChild className="bg-white text-primary-700 hover:bg-gray-100">
               <Link href="/contact">Contact Our Team</Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-primary-700">
+            <Button asChild variant="outline" className="border-white text-primary-100 hover:bg-white hover:text-primary-700">
               <Link href="/careers">Join Our Mission</Link>
             </Button>
           </div>

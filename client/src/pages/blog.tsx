@@ -43,12 +43,20 @@ export default function Blog() {
         <div className="space-y-12">
           
           {/* Article 1: AI Subject Lines */}
-          <article className="bg-white rounded-xl shadow-sm overflow-hidden">
+          <article className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="bg-primary-50 border-b border-primary-100 px-8 py-4">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  Featured Article
+                </span>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>December 15, 2024</span>
+                </div>
+              </div>
+            </div>
             <div className="p-8">
               <div className="flex items-center text-sm text-gray-500 mb-4">
-                <Calendar className="w-4 h-4 mr-2" />
-                <span>January 15, 2025</span>
-                <span className="mx-2">•</span>
                 <User className="w-4 h-4 mr-2" />
                 <span>Sarah Chen, Head of AI</span>
                 <span className="mx-2">•</span>
@@ -203,12 +211,20 @@ export default function Blog() {
           </article>
 
           {/* Article 2: Revenue Lift Measurement */}
-          <article className="bg-white rounded-xl shadow-sm overflow-hidden">
+          <article className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="bg-green-50 border-b border-green-100 px-8 py-4">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                  Analytics Deep Dive
+                </span>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>December 8, 2024</span>
+                </div>
+              </div>
+            </div>
             <div className="p-8">
               <div className="flex items-center text-sm text-gray-500 mb-4">
-                <Calendar className="w-4 h-4 mr-2" />
-                <span>December 8, 2024</span>
-                <span className="mx-2">•</span>
                 <User className="w-4 h-4 mr-2" />
                 <span>Mike Rodriguez, VP Analytics</span>
                 <span className="mx-2">•</span>
@@ -401,12 +417,20 @@ export default function Blog() {
           </article>
 
           {/* Article 3: Gmail/Yahoo Rules */}
-          <article className="bg-white rounded-xl shadow-sm overflow-hidden">
+          <article className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="bg-orange-50 border-b border-orange-100 px-8 py-4">
+              <div className="flex items-center justify-between">
+                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                  Industry Update
+                </span>
+                <div className="flex items-center text-sm text-gray-500">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  <span>November 22, 2024</span>
+                </div>
+              </div>
+            </div>
             <div className="p-8">
               <div className="flex items-center text-sm text-gray-500 mb-4">
-                <Calendar className="w-4 h-4 mr-2" />
-                <span>November 22, 2024</span>
-                <span className="mx-2">•</span>
                 <User className="w-4 h-4 mr-2" />
                 <span>Lisa Park, Deliverability Lead</span>
                 <span className="mx-2">•</span>
@@ -688,7 +712,7 @@ export default function Blog() {
             <Button asChild className="bg-white text-primary-700 hover:bg-gray-100">
               <Link href="/">Join Waitlist</Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white hover:text-primary-700">
+            <Button asChild variant="outline" className="border-white text-primary-100 hover:bg-white hover:text-primary-700">
               <Link href="/contact">Contact Our Team</Link>
             </Button>
           </div>
