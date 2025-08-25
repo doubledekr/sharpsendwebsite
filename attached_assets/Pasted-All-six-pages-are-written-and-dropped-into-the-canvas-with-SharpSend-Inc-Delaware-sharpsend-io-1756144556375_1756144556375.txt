@@ -1,0 +1,29 @@
+All six pages are written and dropped into the canvas with SharpSend, Inc. (Delaware) + sharpsend.io details:
+
+* /api-docs – complete REST docs with auth, rate limits, endpoints, example requests, errors, webhooks, and best practices
+* /integrations – connectors (basic vs. premium), core features, security notes, and value props
+* /about – mission, beliefs, how we help, company details
+* /contact – sales/support/security/privacy emails, hours, registered address, form fields
+* /careers – work style, benefits, 4 job postings with responsibilities/requirements, EEO + how to apply
+* /blog – 3 full articles + “Sources” sections (ready to publish)
+
+Key external references used for the blog/articles (for your records):
+
+* Gmail bulk-sender requirements and FAQ (SPF/DKIM/DMARC, one-click, 5k/day definition). ([Google Help][1])
+* Yahoo bulk-sender best practices (≤0.3% complaints; keep <0.1% advisable). ([senders.yahooinc.com][2])
+* RFC 8058 (one-click unsubscribe). ([IETF Datatracker][3])
+* Litmus “State of Email Trends” (GenAI = time savings > performance). ([Litmus][4])
+* Validity “State of Email 2024” (deliverability benchmarks). ([Validity][5])
+* Holdout/incrementality explainers (Measured, Goodway, Criteo/Haus). ([Measured®][6], [Goodway Group][7], [Criteo][8], [Haus][9])
+
+Want me to also: (a) swap in your preferred Delaware venue/choice-of-law clause in the T\&C, and (b) generate HTML/MDX files per route so you can drop them straight into your site repo?
+
+[1]: https://support.google.com/a/answer/81126?hl=en&utm_source=chatgpt.com "Email sender guidelines - Google Workspace Admin Help"
+[2]: https://senders.yahooinc.com/best-practices/?utm_source=chatgpt.com "Sender Best Practices"
+[3]: https://datatracker.ietf.org/doc/html/rfc8058?utm_source=chatgpt.com "RFC 8058 - Signaling One-Click Functionality for List Email ..."
+[4]: https://www.litmus.com/wp-content/uploads/pdf/The-2024-State-of-Email-Trends.pdf?mkt_tok=ODY0LVZQWi0xMzEAAAGTbufhcjghzqlcCD4Uuxp9aD01tbm3TNjv6Tl1tq8ynSO5bNyRJxcRxQ8AI5nPY3NjUQJlaYhHxdeKSqtPYtUGJGIEf2ObxVKjy4ag2hyXUh0C&utm_campaign=wc-2024-02-the_2024_state_of_email_trends-litmus_thought_leadership&utm_medium=email&utm_source=chatgpt.com "The State of Email Trends Report"
+[5]: https://www.validity.com/resource-center/the-state-of-email-in-2024-keeping-ahead-of-the-curve/?utm_source=chatgpt.com "The State of Email in 2024: Keeping Ahead of the Curve"
+[6]: https://www.measured.com/faq/holdout-test/?utm_source=chatgpt.com "Mastering a Holdout Test in Marketing (Strategies)"
+[7]: https://www.goodwaygroup.com/blogs/measure-incremental-lift?utm_source=chatgpt.com "How To Measure Incremental Lift"
+[8]: https://www.criteo.com/blog/understanding-incrementality/?utm_source=chatgpt.com "Understanding incrementality: The key to measuring a ..."
+[9]: https://haus.io/blog/incrementality-fundamentals?utm_source=chatgpt.com "Incrementality: The fundamentals"
