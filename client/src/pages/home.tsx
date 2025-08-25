@@ -30,6 +30,7 @@ import {
   Linkedin,
   Github
 } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -915,32 +916,41 @@ export default function Home() {
             </div>
           </div>
 
-          {/* ROI Guarantee */}
+          {/* Performance Promise */}
           <div className="mt-16 text-center">
-            <div className="bg-gradient-to-r from-gold-50 to-primary-50 rounded-2xl p-8 max-w-4xl mx-auto" data-testid="roi-guarantee">
+            <div className="bg-gradient-to-r from-gold-50 to-primary-50 rounded-2xl p-8 max-w-4xl mx-auto" data-testid="performance-promise">
               <div className="flex items-center justify-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center">
                   <ShieldCheck className="w-6 h-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Revenue Growth Guarantee</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Performance Promise</h3>
               <p className="text-lg text-gray-600 mb-6">
-                We're so confident in SharpSend's ability to grow your newsletter revenue, 
-                we offer a 90-day money-back guarantee. If you don't see at least 25% revenue growth, 
-                we'll refund your entire investment.
+                Increase your attributable newsletter revenue by <strong>15% within 90 days</strong> of go-live, 
+                or we'll credit your next month free.
+              </p>
+              <p className="text-sm text-gray-500 mb-6">
+                Eligible accounts only; requires standard setup, tracking, and test protocol. 
+                <button 
+                  onClick={() => scrollToSection('terms')} 
+                  className="text-primary-600 hover:text-primary-700 underline ml-1"
+                  data-testid="details-link"
+                >
+                  Details below
+                </button>
               </p>
               <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
                 <div className="flex items-center">
                   <Calendar className="w-4 h-4 mr-2" />
-                  90-day guarantee
+                  90-day timeline
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-4 h-4 mr-2" />
-                  Minimum 25% growth
+                  15% revenue increase
                 </div>
                 <div className="flex items-center">
                   <CreditCard className="w-4 h-4 mr-2" />
-                  Full refund if not satisfied
+                  Service credit remedy
                 </div>
               </div>
             </div>
@@ -1054,7 +1064,7 @@ export default function Home() {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Terms</a>
+              <Link href="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms</Link>
               <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">Security</a>
             </div>
           </div>
