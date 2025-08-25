@@ -1041,19 +1041,19 @@ export default function Home() {
               <h4 className="font-semibold text-white mb-4">Product</h4>
               <ul className="space-y-2">
                 <li><button onClick={() => scrollToSection('features')} className="hover:text-white transition-colors">Features</button></li>
-                <li><button onClick={() => scrollToSection('integrations')} className="hover:text-white transition-colors">Integrations</button></li>
+                <li><Link href="/integrations" className="hover:text-white transition-colors">Integrations</Link></li>
                 <li><button onClick={() => scrollToSection('pricing')} className="hover:text-white transition-colors">Pricing</button></li>
-                <li><a href="#" className="hover:text-white transition-colors">API Docs</a></li>
+                <li><Link href="/api-docs" className="hover:text-white transition-colors">API Docs</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold text-white mb-4">Company</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
+                <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+                <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               </ul>
             </div>
           </div>
