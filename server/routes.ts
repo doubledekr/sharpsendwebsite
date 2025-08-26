@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertWaitlistSchema } from "@shared/schema";
 import { z } from "zod";
+import { convertKitService } from "./convertkit";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Waitlist signup endpoint
@@ -11,8 +12,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate the request body
       const validatedData = insertWaitlistSchema.parse(req.body);
       
-      // Create the waitlist entry
+      // Create the waitlist entry in local storage
       const entry = await storage.createWaitlistEntry(validatedData);
+      
+      // Add subscriber to ConvertKit (don't fail if this errors)
+      try {
+        await convertKitService.addSubscriberToForm(validatedData);
+        console.log('Successfully added to ConvertKit:', validatedData.email);
+      } catch (convertKitError) {
+        console.error('ConvertKit integration failed, but local entry created:', convertKitError);
+        // Continue with successful response even if ConvertKit fails
+      }
       
       res.status(201).json({
         success: true,
