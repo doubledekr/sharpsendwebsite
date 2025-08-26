@@ -42,13 +42,32 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertWaitlistEntry) => {
-      const response = await apiRequest('POST', '/api/waitlist', data);
+      const response = await fetch('https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: data.email,
+          company: data.company,
+          subscriberCount: data.subscriberCount,
+          emailPlatform: data.platform,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       return response.json();
     },
     onSuccess: (data) => {
+      const leadScore = data.leadScore || 'N/A';
+      const tags = data.tags || 'N/A';
+      
       toast({
-        title: "Success!",
-        description: "You've been added to our waitlist. We'll be in touch soon!",
+        title: "🎉 Successfully joined the waitlist!",
+        description: `Lead Score: ${leadScore}/100 | You'll hear from us soon!`,
       });
       queryClient.invalidateQueries({ queryKey: ['/api/waitlist/stats'] });
       form.reset();
@@ -57,7 +76,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
     onError: (error: any) => {
       const message = error?.message || "Something went wrong. Please try again.";
       toast({
-        title: "Error",
+        title: "❌ Error",
         description: message,
         variant: "destructive",
       });
@@ -117,11 +136,11 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <SelectValue placeholder="Select range..." />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="under-1k">Under 1,000</SelectItem>
-            <SelectItem value="1k-5k">1,000 - 5,000</SelectItem>
-            <SelectItem value="5k-25k">5,000 - 25,000</SelectItem>
-            <SelectItem value="25k-100k">25,000 - 100,000</SelectItem>
-            <SelectItem value="over-100k">Over 100,000</SelectItem>
+            <SelectItem value="Under 1,000">Under 1,000</SelectItem>
+            <SelectItem value="1,000 - 5,000">1,000 - 5,000</SelectItem>
+            <SelectItem value="5,000 - 25,000">5,000 - 25,000</SelectItem>
+            <SelectItem value="25,000 - 100,000">25,000 - 100,000</SelectItem>
+            <SelectItem value="Over 100,000">Over 100,000</SelectItem>
           </SelectContent>
         </Select>
         {form.formState.errors.subscriberCount && (
@@ -140,11 +159,11 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
             <SelectValue placeholder="Select platform..." />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="mailchimp">Mailchimp</SelectItem>
-            <SelectItem value="sendgrid">SendGrid</SelectItem>
-            <SelectItem value="convertkit">ConvertKit</SelectItem>
-            <SelectItem value="activecampaign">ActiveCampaign</SelectItem>
-            <SelectItem value="other">Other</SelectItem>
+            <SelectItem value="Mailchimp">Mailchimp</SelectItem>
+            <SelectItem value="SendGrid">SendGrid</SelectItem>
+            <SelectItem value="ConvertKit">ConvertKit</SelectItem>
+            <SelectItem value="ActiveCampaign">ActiveCampaign</SelectItem>
+            <SelectItem value="Other">Other</SelectItem>
           </SelectContent>
         </Select>
         {form.formState.errors.platform && (
@@ -179,7 +198,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
         data-testid="submit-waitlist"
       >
-        {mutation.isPending ? "Securing Your Spot..." : "Secure My Spot"}
+        {mutation.isPending ? "Joining Waitlist..." : "Secure My Spot"}
       </Button>
     </form>
   );
