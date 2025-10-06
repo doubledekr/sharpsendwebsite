@@ -42,32 +42,13 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertWaitlistEntry) => {
-      const response = await fetch('https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: data.email,
-          company: data.company,
-          subscriberCount: data.subscriberCount,
-          emailPlatform: data.platform,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
+      const response = await apiRequest('POST', '/api/waitlist', data);
       return response.json();
     },
     onSuccess: (data) => {
-      const leadScore = data.leadScore || 'N/A';
-      const tags = data.tags || 'N/A';
-      
       toast({
-        title: "🎉 Successfully joined the waitlist!",
-        description: `Lead Score: ${leadScore}/100 | You'll hear from us soon!`,
+        title: "Success!",
+        description: "You've been added to our waitlist and ConvertKit. We'll be in touch soon!",
       });
       queryClient.invalidateQueries({ queryKey: ['/api/waitlist/stats'] });
       form.reset();
@@ -76,7 +57,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
     onError: (error: any) => {
       const message = error?.message || "Something went wrong. Please try again.";
       toast({
-        title: "❌ Error",
+        title: "Error",
         description: message,
         variant: "destructive",
       });
@@ -198,7 +179,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
         className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
         data-testid="submit-waitlist"
       >
-        {mutation.isPending ? "Joining Waitlist..." : "Secure My Spot"}
+        {mutation.isPending ? "Securing Your Spot..." : "Secure My Spot"}
       </Button>
     </form>
   );
