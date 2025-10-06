@@ -48,7 +48,7 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
     onSuccess: (data) => {
       toast({
         title: "Success!",
-        description: "You've been added to our waitlist and ConvertKit. We'll be in touch soon!",
+        description: "You've been added to our waitlist. We'll be in touch soon!",
       });
       queryClient.invalidateQueries({ queryKey: ['/api/waitlist/stats'] });
       form.reset();
