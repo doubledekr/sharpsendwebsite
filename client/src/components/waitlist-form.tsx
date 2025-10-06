@@ -42,7 +42,23 @@ export function WaitlistForm({ onSuccess }: WaitlistFormProps) {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertWaitlistEntry) => {
-      const response = await apiRequest('POST', '/api/waitlist', data);
+      const response = await fetch('https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: data.email,
+          company: data.company,
+          subscriberCount: data.subscriberCount,
+          emailPlatform: data.platform,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to join waitlist');
+      }
+
       return response.json();
     },
     onSuccess: (data) => {
