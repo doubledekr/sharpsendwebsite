@@ -3,7 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertWaitlistSchema } from "@shared/schema";
 import { z } from "zod";
-import { convertKitService } from "./convertkit";
+import { googleSheetsService } from "./google-sheets";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Waitlist signup endpoint
@@ -15,13 +15,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Create the waitlist entry in local storage
       const entry = await storage.createWaitlistEntry(validatedData);
       
-      // Add subscriber to ConvertKit (don't fail if this errors)
+      // Add to Google Sheets (don't fail if this errors)
       try {
-        await convertKitService.addSubscriberToForm(validatedData);
-        console.log('Successfully added to ConvertKit:', validatedData.email);
-      } catch (convertKitError) {
-        console.error('ConvertKit integration failed, but local entry created:', convertKitError);
-        // Continue with successful response even if ConvertKit fails
+        await googleSheetsService.addWaitlistEntry(validatedData);
+        console.log('Successfully added to Google Sheets:', validatedData.email);
+      } catch (sheetsError) {
+        console.error('Google Sheets integration failed, but local entry created:', sheetsError);
+        // Continue with successful response even if Google Sheets fails
       }
       
       res.status(201).json({
