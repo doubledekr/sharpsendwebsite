@@ -1,6 +1,6 @@
 # Overview
 
-This is a modern full-stack web application built with React and Express.js that serves as a landing page with waitlist functionality. The application features a clean, responsive design using shadcn/ui components and Tailwind CSS, with a robust backend API for handling waitlist signups. The system is designed to collect user information including email, company details, subscriber counts, and platform preferences.
+This is a modern full-stack web application built with React and Express.js that serves as a landing page with waitlist functionality. The application features a clean, responsive design using shadcn/ui components and Tailwind CSS. The waitlist system integrates directly with ConvertKit via a Cloudflare Worker for production deployments. The system collects user information including email, company details, subscriber counts, and platform preferences.
 
 # User Preferences
 
@@ -41,8 +41,20 @@ Preferred communication style: Simple, everyday language.
 ## Build & Deployment
 - **Build Process**: Separate builds for client (Vite) and server (esbuild)
 - **Development**: Concurrent client and server with hot reload
-- **Production**: Bundled server with static client assets
+- **Production**: Static frontend deployed to Cloudflare Pages
+- **Waitlist API**: Cloudflare Worker handling ConvertKit integration
 - **TypeScript**: Strict mode with path mapping for clean imports
+
+## Waitlist Integration (Production)
+- **Frontend**: Waitlist form sends directly to Cloudflare Worker
+- **Worker URL**: https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/
+- **ConvertKit Setup**:
+  - Form ID: 8480235 ("Pine form")
+  - Custom Fields: company, subscriber_count, current_platform, signup_source, lead_score
+  - Smart Tagging: Lead scoring, platform detection, business size categorization, timing tags
+  - Double opt-in enabled for email confirmation
+- **Security**: Rate limiting, input validation, CORS protection
+- **Note**: Replit server routes are for local development only; production uses Cloudflare Worker
 
 # External Dependencies
 
