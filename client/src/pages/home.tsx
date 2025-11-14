@@ -37,17 +37,26 @@ export default function Home() {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertWaitlistEntry) => {
-      const response = await fetch('https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/', {
+      const isProduction = window.location.hostname === 'sharpsend.io';
+      const apiUrl = isProduction 
+        ? 'https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/'
+        : '/api/waitlist';
+
+      const body = isProduction 
+        ? {
+            email: data.email,
+            company: data.company,
+            subscriberCount: data.subscriberCount,
+            emailPlatform: data.platform,
+          }
+        : data;
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          email: data.email,
-          company: data.company,
-          subscriberCount: data.subscriberCount,
-          emailPlatform: data.platform,
-        }),
+        body: JSON.stringify(body),
       });
 
       if (!response.ok) {
