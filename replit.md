@@ -45,16 +45,18 @@ Preferred communication style: Simple, everyday language.
 - **Waitlist API**: Cloudflare Worker handling ConvertKit integration
 - **TypeScript**: Strict mode with path mapping for clean imports
 
-## Waitlist Integration (Production)
-- **Frontend**: Waitlist form sends directly to Cloudflare Worker
-- **Worker URL**: https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/
+## Waitlist Integration
+- **Environment-Aware Form**: Automatically detects deployment environment
+  - **Development** (Replit): Uses local `/api/waitlist` endpoint with Google Sheets integration
+  - **Production** (sharpsend.io): Uses Cloudflare Worker → ConvertKit
+- **Cloudflare Worker**: https://sharpsend-waitlist.davemaxwellmaxwell.workers.dev/
 - **ConvertKit Setup**:
   - Form ID: 8480235 ("Pine form")
   - Custom Fields: company, subscriber_count, current_platform, signup_source, lead_score
   - Smart Tagging: Lead scoring, platform detection, business size categorization, timing tags
   - Double opt-in enabled for email confirmation
-- **Security**: Rate limiting, input validation, CORS protection
-- **Note**: Replit server routes are for local development only; production uses Cloudflare Worker
+- **Security**: Rate limiting, input validation, CORS protection (production only allows sharpsend.io)
+- **Landing Page**: Simple one-page waitlist at index, comprehensive site preserved in home-full.tsx
 
 # External Dependencies
 
