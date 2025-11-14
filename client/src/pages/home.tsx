@@ -92,9 +92,12 @@ export default function Home() {
       <div className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent mb-4">
-            SharpSend
-          </h1>
+          <div className="flex items-center justify-center space-x-4 mb-4">
+            <img src="/sharpsend-logo.png" alt="SharpSend" className="w-12 h-12 md:w-16 md:h-16" />
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+              SharpSend
+            </h1>
+          </div>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
             AI-Powered Newsletter Personalization for Financial Publishers
           </p>
@@ -109,8 +112,7 @@ export default function Home() {
                 Transform Every Newsletter Into a Personalized Experience
               </h2>
               <p className="text-lg text-gray-700 mb-8">
-                SharpSend uses AI to automatically personalize your financial newsletters for each subscriber, 
-                boosting engagement and revenue without changing your workflow.
+                SharpSend uses AI to automatically personalize your financial newsletters boosting engagement and revenue without changing your workflow.
               </p>
             </div>
 
